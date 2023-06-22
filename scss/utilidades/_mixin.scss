@@ -1,0 +1,18 @@
+// mixin sin parametros
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+}
+
+@mixin gap{
+    gap: 20px;
+}
+
+// mixin con parametros
+
+@mixin tamaños ($widht, $height){
+    width: $widht;
+    height: $height;
+}
+

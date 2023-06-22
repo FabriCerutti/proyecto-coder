@@ -1,0 +1,192 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Estilo tipografia */
+body p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem; }
+
+body {
+  background: linear-gradient(to bottom right, #666666, #8f3d38, #56070c); }
+
+/* Estilos header */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem; }
+  .nav ul li {
+    transition: 0.5s; }
+    .nav ul li :hover {
+      transform: scale(1.1);
+      text-shadow: 1px 1px 20px #989898;
+      transition: 0.5s; }
+  .nav img {
+    margin-inline-start: 5px; }
+
+/* Estilos home */
+.escuela {
+  display: flex;
+  align-items: center;
+  gap: 20px; }
+  .escuela img {
+    width: 45%;
+    height: auto;
+    margin: 20px 0 20px 20px; }
+  .escuela p {
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 20px;
+    color: whitesmoke; }
+
+.sol {
+  display: flex;
+  align-items: center;
+  gap: 20px; }
+  .sol img {
+    width: 45%;
+    height: auto;
+    margin: 20px 0 20px 20px; }
+  .sol p {
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 20px;
+    color: whitesmoke; }
+
+.difundiendo {
+  display: flex;
+  align-items: center;
+  gap: 20px; }
+  .difundiendo img {
+    width: 45%;
+    height: auto;
+    margin: 20px 0 20px 20px; }
+  .difundiendo p {
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 20px;
+    color: whitesmoke; }
+
+/* Estilo biografia */
+.biografia p {
+  text-align: center;
+  color: whitesmoke;
+  margin: 30px; }
+
+.imgcara {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .imgcara img {
+    width: 55%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 10px; }
+
+.imgcuerpo {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .imgcuerpo img {
+    width: 55%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 10px; }
+
+/* Estilo clases */
+.parrafos {
+  text-align: center;
+  color: whitesmoke;
+  margin: 20px; }
+  .parrafos span {
+    color: #56070c; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  margin: 20px; }
+
+.dia {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  border-radius: 10px;
+  color: whitesmoke; }
+
+.celda {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  border-radius: 10px;
+  color: whitesmoke; }
+
+/* Estilo galeria */
+.container {
+  display: flex;
+  flex-wrap: wrap; }
+  .container img {
+    width: 100%;
+    margin-top: 15px;
+    margin-block-end: 10px;
+    border-radius: 20px; }
+
+/* Estilo contacto */
+.content {
+  padding: 0 20px;
+  color: whitesmoke;
+  margin-bottom: 20px; }
+  .content .logo {
+    text-align: center;
+    margin-bottom: 20px; }
+  .content .mapa {
+    text-align: center; }
+  .content h2 {
+    margin-bottom: 20px; }
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 20px; }
+
+.contact-form form button, .contact-form form input, .contact-form form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  outline: 0;
+  color: whitesmoke;
+  border-bottom: 1px solid #56070c; }
+
+.contact-form form button {
+  background: #56070c;
+  border: 0;
+  padding: 10px;
+  border-radius: 20px; }
+
+.contact-form form {
+  margin: 15px; }
+
+/* Estilo footer */
+.derechos {
+  display: none; }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline-end: 20px;
+  margin-inline-start: 5px; }
+  footer ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; }
+
+.redes a {
+  color: whitesmoke;
+  font-size: 25px; }

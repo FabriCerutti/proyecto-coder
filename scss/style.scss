@@ -1,0 +1,236 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo tipografia */
+
+body p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+}
+
+body{
+    background: linear-gradient(to bottom right, #666666, #8f3d38, #56070c);
+}
+
+// import 
+
+@import "utilidades/mixin";
+
+/* Estilos header */
+
+.nav {
+    @include flex;
+    justify-content: space-between;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    ul li{
+        transition: 0.5s;      
+    :hover{
+        transform: scale(1.1);
+        text-shadow: 1px 1px 20px #989898;
+        transition: 0.5s;
+        }
+    }
+     img{
+        margin-inline-start: 5px;
+    }
+}
+
+/* Estilos home */
+
+.escuela{
+    @include flex;
+    @include gap;
+    img{
+        @include tamaños (45%, auto);
+        margin: 20px 0 20px 20px;
+    }
+    p{
+        font-size: 1rem;
+        text-align: center;
+        margin-right: 20px;
+        color: whitesmoke;
+    }
+}
+
+.sol{
+    @include flex;
+    @include gap;
+    img{
+        @include tamaños (45%, auto);
+        margin: 20px 0 20px 20px;
+    }
+    p{
+        font-size: 1rem;
+        text-align: center;
+        margin-right: 20px;
+        color: whitesmoke;
+    }
+}
+
+.difundiendo{
+    @include flex;
+    @include gap;
+    img{
+        @include tamaños (45%, auto);
+        margin: 20px 0 20px 20px;
+    }
+    p{
+        font-size: 1rem;
+        text-align: center;
+        margin-right: 20px;
+        color: whitesmoke;
+     }
+}
+
+/* Estilo biografia */
+
+.biografia{
+    p{
+        text-align: center;
+        color: whitesmoke;
+        margin: 30px;
+    }
+}
+
+.imgcara {
+    @include flex;
+    justify-content: center;
+    img{
+        @include tamaños (55%, auto);
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+}
+
+.imgcuerpo{
+    @include flex;
+    justify-content: center;
+    img{
+        @include tamaños (55%, auto);
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilo clases */
+
+.parrafos{
+    text-align: center;
+    color: whitesmoke;
+    margin: 20px;
+    span{
+        color: #56070c;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    margin: 20px;  
+  }
+  
+  .dia{
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    color: whitesmoke;
+  }
+  .celda {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px; 
+    color: whitesmoke;
+  }
+
+/* Estilo galeria */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    img{
+        width: 100%;
+        margin-top: 15px;
+        margin-block-end: 10px;
+        border-radius: 20px;
+    }
+}
+
+/* Estilo contacto */
+
+.content{
+    padding: 0 20px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    .logo{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .mapa{
+        text-align: center;
+    }
+    h2{
+        margin-bottom: 20px;
+    }
+}
+
+.contact-wrapper{
+    box-shadow: 0 0 20px 0 rgba( 255, 255, 255, .3);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contact-form form button, .contact-form form input, .contact-form form textarea{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    outline: 0;
+    color: whitesmoke;
+    border-bottom: 1px solid #56070c;
+}
+
+.contact-form form button{
+    background: #56070c;
+    border: 0;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.contact-form form{
+    margin: 15px;
+}
+
+/* Estilo footer */
+
+.derechos{
+    display: none;
+}
+
+footer{
+    @include flex;
+    justify-content: space-between;
+    margin-inline-end: 20px;
+    margin-inline-start: 5px;
+    ul{
+        list-style-type: none;
+        display: flex;
+        @include gap;
+    }
+}
+
+.redes{ 
+    a{
+        color: whitesmoke;
+        font-size: 25px;
+    }
+}
