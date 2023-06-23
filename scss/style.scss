@@ -15,6 +15,9 @@ body p{
 
 body{
     background: linear-gradient(to bottom right, #666666, #8f3d38, #56070c);
+    position: relative;
+    padding-bottom: 1rem;
+    min-height: 100vh;
 }
 
 // import 
@@ -220,7 +223,7 @@ footer{
     @include flex;
     justify-content: space-between;
     margin-inline-end: 20px;
-    margin-inline-start: 5px;
+    margin-top: 30px;
     ul{
         list-style-type: none;
         display: flex;
@@ -234,3 +237,110 @@ footer{
         font-size: 25px;
     }
 }
+
+@media screen and (min-width:1024px){
+
+    /* Home */
+
+    .home{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: ;
+        .escuela{
+            display: flex;
+            flex-direction: column;
+            img{
+                @include tamaños (auto, 50vh);
+            }
+            p{  
+                padding: 0 40px;
+                margin-left: 40px;
+            }
+        }
+        .sol{
+            display: flex;
+            flex-direction: column;
+            img{
+                @include tamaños (auto, 50vh);
+            }
+            p{
+                padding: 0 40px;
+                margin-left: 40px;
+            }
+        }
+        .difundiendo{
+            display: flex;
+            flex-direction: column;
+            img{
+                @include tamaños (auto, 50vh);
+            }
+            p{
+                padding: 0 40px;
+                margin-left: 40px;
+            }
+        }
+    }
+
+    /* Biografia */
+
+    .biografia{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 45px;
+        p{
+            font-size: 1rem;
+            margin-left: 80px;
+        }
+    }
+
+    .imgcara img{
+        @include tamaños (auto, 80vh);
+    }
+
+    .imgcuerpo img{
+        @include tamaños (auto, 80vh);
+    }
+
+    /* Clases */
+
+    .parrafos {
+        display: flex;
+        text-align: center;
+        color: whitesmoke;
+        margin: 20px; 
+        gap: 30px;
+    }
+    .parrafos span {
+        color: #56070c; }
+
+    /* Galeria */
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .column img{
+        @include tamaños (35vw, 55vh);
+        margin-left: 35px;
+        margin-bottom: 40px;
+    }
+
+    /* Contacto */
+
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 60px;
+    }
+
+    /* Footer */
+
+    .derechos{
+        display: block;
+        color: whitesmoke;
+        font-size: 0.8rem;
+    }
+}
+
