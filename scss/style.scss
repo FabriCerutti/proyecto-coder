@@ -20,9 +20,12 @@ body{
     min-height: 100vh;
 }
 
+
 // import 
 
 @import "utilidades/mixin";
+@import "utilidades/vars";
+@import "utilidades/extend";
 
 /* Estilos header */
 
@@ -30,8 +33,7 @@ body{
     @include flex;
     justify-content: space-between;
     font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     ul li{
         transition: 0.5s;      
     :hover{
@@ -52,13 +54,12 @@ body{
     @include gap;
     img{
         @include tamaños (45%, auto);
-        margin: 20px 0 20px 20px;
+        margin: 20px 0 20px 20px;   
     }
     p{
-        font-size: 1rem;
+        @extend %letra;
         text-align: center;
-        margin-right: 20px;
-        color: whitesmoke;
+        color: $color-letra;
     }
 }
 
@@ -70,10 +71,9 @@ body{
         margin: 20px 0 20px 20px;
     }
     p{
-        font-size: 1rem;
+        @extend %letra;
         text-align: center;
-        margin-right: 20px;
-        color: whitesmoke;
+        color: $color-letra;
     }
 }
 
@@ -85,10 +85,9 @@ body{
         margin: 20px 0 20px 20px;
     }
     p{
-        font-size: 1rem;
+        @extend %letra;
         text-align: center;
-        margin-right: 20px;
-        color: whitesmoke;
+        color: $color-letra;
      }
 }
 
@@ -97,8 +96,13 @@ body{
 .biografia{
     p{
         text-align: center;
-        color: whitesmoke;
+        color: $color-letra;
         margin: 30px;
+    }
+    h2{
+        text-align: center;
+        color: $color-secundario;
+        margin-top: 20px;
     }
 }
 
@@ -112,24 +116,14 @@ body{
     }
 }
 
-.imgcuerpo{
-    @include flex;
-    justify-content: center;
-    img{
-        @include tamaños (55%, auto);
-        border-radius: 20px;
-        margin-bottom: 10px;
-    }
-}
-
 /* Estilo clases */
 
 .parrafos{
     text-align: center;
-    color: whitesmoke;
+    color: $color-letra;
     margin: 20px;
     span{
-        color: #56070c;
+        color: $color-secundario;
     }
 }
 
@@ -145,14 +139,14 @@ body{
     padding: 8px;
     text-align: center;
     border-radius: 10px;
-    color: whitesmoke;
+    color: $color-letra;
   }
   .celda {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
     border-radius: 10px; 
-    color: whitesmoke;
+    color: $color-letra;
   }
 
 /* Estilo galeria */
@@ -172,7 +166,7 @@ body{
 
 .content{
     padding: 0 20px;
-    color: whitesmoke;
+    color: $color-letra;
     margin-bottom: 20px;
     .logo{
         text-align: center;
@@ -198,16 +192,17 @@ body{
     border: none;
     background: none;
     outline: 0;
-    color: whitesmoke;
+    color: $color-letra;
     border-bottom: 1px solid #56070c;
 }
 
 .contact-form form button{
-    background: #56070c;
+    background: $color-secundario;
     border: 0;
     padding: 10px;
     border-radius: 20px;
 }
+   
 
 .contact-form form{
     margin: 15px;
@@ -232,8 +227,12 @@ footer{
 }
 
 .redes{ 
+    transition: transform 0.3s ease;
+    :hover{
+        transform: scale(1.1);
+    }
     a{
-        color: whitesmoke;
+        color: $color-letra;
         font-size: 25px;
     }
 }
@@ -245,7 +244,7 @@ footer{
     .home{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-bottom: ;
+        margin-bottom: 80px;
         .escuela{
             display: flex;
             flex-direction: column;
@@ -255,6 +254,7 @@ footer{
             p{  
                 padding: 0 40px;
                 margin-left: 40px;
+                font-size: 1.2rem;
             }
         }
         .sol{
@@ -266,6 +266,7 @@ footer{
             p{
                 padding: 0 40px;
                 margin-left: 40px;
+                font-size: 1.2rem;
             }
         }
         .difundiendo{
@@ -277,6 +278,7 @@ footer{
             p{
                 padding: 0 40px;
                 margin-left: 40px;
+                font-size: 1.2rem;
             }
         }
     }
@@ -285,19 +287,17 @@ footer{
 
     .biografia{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin-left: 45px;
-        p{
-            font-size: 1rem;
-            margin-left: 80px;
-        }
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
+
+    .texto{
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-top: 70px;
     }
 
     .imgcara img{
-        @include tamaños (auto, 80vh);
-    }
-
-    .imgcuerpo img{
         @include tamaños (auto, 80vh);
     }
 
@@ -306,13 +306,22 @@ footer{
     .parrafos {
         display: flex;
         text-align: center;
-        color: whitesmoke;
-        margin: 20px; 
-        gap: 30px;
+        color: $color-letra;
+        margin: 50px;
+        margin-bottom: 80px; 
+        gap: 40px;
+        font-size: 1.2rem;
     }
     .parrafos span {
-        color: #56070c; }
-
+        color: $color-secundario; 
+        font-size: 1.2rem;
+    }
+    .grid-container{
+        margin: 0 50px;
+        margin-bottom: 150px;
+        font-size: 1.2rem;
+    }
+    
     /* Galeria */
 
     .container{
@@ -323,7 +332,7 @@ footer{
 
     .column img{
         @include tamaños (35vw, 55vh);
-        margin-left: 35px;
+        margin-left: 20px;
         margin-bottom: 40px;
     }
 
@@ -339,7 +348,7 @@ footer{
 
     .derechos{
         display: block;
-        color: whitesmoke;
+        color: $color-letra;
         font-size: 0.8rem;
     }
 }

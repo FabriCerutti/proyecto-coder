@@ -15,14 +15,17 @@ body {
   padding-bottom: 1rem;
   min-height: 100vh; }
 
+.escuela p, .sol p, .difundiendo p {
+  font-size: 1rem;
+  margin-right: 20px; }
+
 /* Estilos header */
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  font-size: 1.1rem; }
+  font-size: 1.3rem; }
   .nav ul li {
     transition: 0.5s; }
     .nav ul li :hover {
@@ -42,9 +45,7 @@ body {
     height: auto;
     margin: 20px 0 20px 20px; }
   .escuela p {
-    font-size: 1rem;
     text-align: center;
-    margin-right: 20px;
     color: whitesmoke; }
 
 .sol {
@@ -56,9 +57,7 @@ body {
     height: auto;
     margin: 20px 0 20px 20px; }
   .sol p {
-    font-size: 1rem;
     text-align: center;
-    margin-right: 20px;
     color: whitesmoke; }
 
 .difundiendo {
@@ -70,9 +69,7 @@ body {
     height: auto;
     margin: 20px 0 20px 20px; }
   .difundiendo p {
-    font-size: 1rem;
     text-align: center;
-    margin-right: 20px;
     color: whitesmoke; }
 
 /* Estilo biografia */
@@ -80,6 +77,11 @@ body {
   text-align: center;
   color: whitesmoke;
   margin: 30px; }
+
+.biografia h2 {
+  text-align: center;
+  color: #56070c;
+  margin-top: 20px; }
 
 .imgcara {
   display: flex;
@@ -90,16 +92,6 @@ body {
     height: auto;
     border-radius: 20px;
     margin-top: 10px; }
-
-.imgcuerpo {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .imgcuerpo img {
-    width: 55%;
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 10px; }
 
 /* Estilo clases */
 .parrafos {
@@ -190,27 +182,30 @@ footer {
     display: flex;
     gap: 20px; }
 
-.redes a {
-  color: whitesmoke;
-  font-size: 25px; }
+.redes {
+  transition: transform 0.3s ease; }
+  .redes :hover {
+    transform: scale(1.1); }
+  .redes a {
+    color: whitesmoke;
+    font-size: 25px; }
 
 @media screen and (min-width: 1024px) {
   /* Home */
   .home {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); }
-    .home mar
-.escuela {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 80px; }
+    .home .escuela {
       display: flex;
       flex-direction: column; }
-      .home mar
-.escuela img {
+      .home .escuela img {
         width: auto;
         height: 50vh; }
-      .home mar
-.escuela p {
+      .home .escuela p {
         padding: 0 40px;
-        margin-left: 40px; }
+        margin-left: 40px;
+        font-size: 1.2rem; }
     .home .sol {
       display: flex;
       flex-direction: column; }
@@ -219,7 +214,8 @@ footer {
         height: 50vh; }
       .home .sol p {
         padding: 0 40px;
-        margin-left: 40px; }
+        margin-left: 40px;
+        font-size: 1.2rem; }
     .home .difundiendo {
       display: flex;
       flex-direction: column; }
@@ -228,19 +224,18 @@ footer {
         height: 50vh; }
       .home .difundiendo p {
         padding: 0 40px;
-        margin-left: 40px; }
+        margin-left: 40px;
+        font-size: 1.2rem; }
   /* Biografia */
   .biografia {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-left: 45px; }
-    .biografia p {
-      font-size: 1rem;
-      margin-left: 80px; }
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto; }
+  .texto {
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-top: 70px; }
   .imgcara img {
-    width: auto;
-    height: 80vh; }
-  .imgcuerpo img {
     width: auto;
     height: 80vh; }
   /* Clases */
@@ -248,10 +243,17 @@ footer {
     display: flex;
     text-align: center;
     color: whitesmoke;
-    margin: 20px;
-    gap: 30px; }
+    margin: 50px;
+    margin-bottom: 80px;
+    gap: 40px;
+    font-size: 1.2rem; }
   .parrafos span {
-    color: #56070c; }
+    color: #56070c;
+    font-size: 1.2rem; }
+  .grid-container {
+    margin: 0 50px;
+    margin-bottom: 150px;
+    font-size: 1.2rem; }
   /* Galeria */
   .container {
     display: grid;
@@ -260,7 +262,7 @@ footer {
   .column img {
     width: 35vw;
     height: 55vh;
-    margin-left: 35px;
+    margin-left: 20px;
     margin-bottom: 40px; }
   /* Contacto */
   .contact-wrapper {
